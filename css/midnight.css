@@ -1,0 +1,207 @@
+/* Variable Colors*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ :root {
+    /* Main Colors*/
+    --main-bg-color: #111111;
+    --main-txt-color: #ffffff;
+    --border-color: #ffffff;
+    /* Secondary Colors*/
+    --sec-bg-color: #9c127e;
+    --sec-txt-color: #27026b;
+    /* Nav Colors*/
+    --nav-bg-color: #111111;
+    --nav-txt-color: #83c6e0;
+    --nav-hover-color: #536aac;
+    /* Border Color */
+    --border-color: #ffffff;
+    --neut1: #ffffff;
+    --neut2: #111111;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-txt-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Style the nav */
+
+nav {
+    background-color: var(--nav-bg-color);
+    height: 25px;
+    width: 98%;
+    padding-top: 15px;
+    padding-left: 35%;
+    margin: 20px auto;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    color: var(--nav-txt-color);
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+nav a:hover {
+    background-color: var(--nav-hover-color);
+    color: var(--neut1);
+}
+
+
+/* Style the header */
+
+header {
+    background-color: var(--main-bg-color);
+    color: var(--main-txt-color);
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    margin: 25px auto;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    border: solid 4px var(--border-color);
+    margin-bottom: 25px;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+span {
+    text-transform: uppercase;
+    font-style: italic;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.about {
+    background-color: var(--main-bg-color);
+    border: solid 2px var(--border-color);
+    float: left;
+    width: 96%;
+    margin: 2%;
+    padding: 1%;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    height: 200px;
+}
+
+
+/* Create two equal columns that floats next to each other */
+
+.column {
+    background-color: var(--main-bg-color);
+    border: solid 2px var(--border-color);
+    float: left;
+    width: 23%;
+    margin: 1%;
+    padding: 1%;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    height: 350px;
+}
+
+
+/* Set column image size*/
+
+.column img {
+    height: 100px;
+    width: auto;
+}
+
+.mems {
+    background-color: var(--main-bg-color);
+    border: solid 2px var(--border-color);
+    float: left;
+    width: 47%;
+    margin: 1%;
+    padding: 1%;
+    color: white;
+}
+
+.mems img {
+    width: 100%;
+    height: 100px;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#contact {
+    background-color: whitesmoke;
+}
+
+
+/* Style the footer */
+
+footer {
+    border: solid 2px var(--border-color);
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    padding: 25px;
+    margin: 25px;
+}
+
+
+/* Responsive layout - when the screen is greater than 900px wide, 4 columns beside each other */
+
+@media screen and (min-width: 901px) {
+    .column {
+        width: 23%;
+    }
+    nav {
+        flex-direction: column;
+    }
+}
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns beside each other */
+
+@media screen and (max-width: 900px) {
+    .column {
+        width: 47%;
+        padding: 0;
+    }
+}
+
+
+/* Responsive layout - when the screen is less than 480px wide, make the navigation links stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 516px) {
+    nav a {
+        float: none;
+        width: 100%;
+    }
+    .column {
+        width: 97%;
+        padding: 0;
+        border: none;
+    }
+}
